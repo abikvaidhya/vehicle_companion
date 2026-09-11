@@ -8,7 +8,7 @@ Flutter + Kotlin / Jetpack Compose hybrid
 </h4>
 <hr>
 
-### Purpose
+## Purpose
 
 A practical companion app for car owners. Log trips, track fuel/charging costs, set maintenance reminders, view trip history on a map, and explore Bluetooth integration.
 
