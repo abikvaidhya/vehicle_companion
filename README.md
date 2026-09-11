@@ -48,7 +48,17 @@ cd vehicle_companion
 ### Install dependencies
 
 ```
-flutter packages get
+flutter pub get
+```
+
+### Add your Google Maps API Key
+goto vehicle_companion/android/local.properties
+add 'MAP_API_KEY=<your API_key here>'
+
+### Clean
+```
+flutter clean
+flutter pub get
 ```
 
 ### Run the app

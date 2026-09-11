@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../../core/utils/formatters.dart';
 import '../maintenance/maintenance_controller.dart';
 import '../maintenance/maintenance_screen.dart';
+import '../map/map_screen.dart';
+import '../settings/settings_screen.dart';
 import '../trips/trips_controller.dart';
 import '../trips/trips_screen.dart';
 
@@ -22,13 +24,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_outlined),
-            onPressed: () {
-              Get.snackbar(
-                'Settings',
-                'Fuel prices & preferences coming soon',
-                snackPosition: SnackPosition.BOTTOM,
-              );
-            },
+            onPressed: () => Get.to(() => const SettingsScreen()),
           ),
         ],
       ),
@@ -55,7 +51,6 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Active trip or start CTA
             Obx(() {
               final active = tripsCtrl.activeTrip.value;
               if (active == null) {
@@ -107,14 +102,8 @@ class HomeScreen extends StatelessWidget {
             _NavCard(
               icon: Icons.map_outlined,
               title: 'Map',
-              subtitle: const Text('Trip routes (Week 4)'),
-              onTap: () {
-                Get.snackbar(
-                  'Map',
-                  'Map view comes after native location is wired',
-                  snackPosition: SnackPosition.BOTTOM,
-                );
-              },
+              subtitle: const Text('View trip routes'),
+              onTap: () => Get.to(() => const MapScreen()),
             ),
 
             const SizedBox(height: 28),
@@ -127,8 +116,8 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              'Flutter UI + GetX · Kotlin / Jetpack Compose for location, '
-              'Bluetooth and background work via platform channels.',
+              'Flutter UI + GetX · Kotlin native channels for location, '
+              'Bluetooth and background work.',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: scheme.onSurfaceVariant,
                   ),
@@ -157,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                   if (t == null) return const SizedBox.shrink();
                   return Text(
                     '${formatKm(t.distanceKm)} · ${t.routePoints.length} GPS points\n'
-                    'Cost will be estimated from fuel type.',
+                    'Cost will be estimated from Settings fuel type.',
                   );
                 }),
                 const SizedBox(height: 20),

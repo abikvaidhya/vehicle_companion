@@ -26,8 +26,8 @@ class LocationChannelHandler(
 ) : MethodCallHandler, EventChannel.StreamHandler {
 
     companion object {
-        const val METHOD_CHANNEL = "com.abik.vaidhya.vehiclecompanion/location"
-        const val EVENT_CHANNEL = "com.abik.vaidhya.vehiclecompanion/location_stream"
+        const val METHOD_CHANNEL = "com.abik.vaidhya.vehicle_companion/location"
+        const val EVENT_CHANNEL = "com.abik.vaidhya.vehicle_companion/location_stream"
     }
 
     private val methodChannel = MethodChannel(messenger, METHOD_CHANNEL)

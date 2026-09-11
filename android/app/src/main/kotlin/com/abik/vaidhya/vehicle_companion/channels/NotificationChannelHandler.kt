@@ -19,7 +19,7 @@ class NotificationChannelHandler(
 ) : MethodCallHandler {
 
     companion object {
-        const val METHOD_CHANNEL = "com.abik.vaidhya.vehiclecompanion/notification"
+        const val METHOD_CHANNEL = "com.abik.vaidhya.vehicle_companion/notification"
         private const val WORK_PREFIX = "maintenance_reminder_"
     }
 

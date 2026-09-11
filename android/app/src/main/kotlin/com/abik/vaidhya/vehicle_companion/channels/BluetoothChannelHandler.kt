@@ -30,8 +30,8 @@ class BluetoothChannelHandler(
 ) : MethodCallHandler, EventChannel.StreamHandler {
 
     companion object {
-        const val METHOD_CHANNEL = "com.abik.vaidhya.vehiclecompanion/bluetooth"
-        const val EVENT_CHANNEL = "com.abik.vaidhya.vehiclecompanion/bluetooth_stream"
+        const val METHOD_CHANNEL = "com.abik.vaidhya.vehicle_companion/bluetooth"
+        const val EVENT_CHANNEL = "com.abik.vaidhya.vehicle_companion/bluetooth_stream"
 
         private val MOCK_DEVICE = mapOf(
             "type" to "device",
