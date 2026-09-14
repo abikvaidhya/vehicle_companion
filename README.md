@@ -27,6 +27,18 @@ This project is designed for the strong automotive / connected-vehicle ecosystem
 
   cupertino_icons: ^1.0.2<br/>
   get:<br/>
+  sqflite: ^2.3.3+1<br/>
+  path: ^1.9.0<br/>
+  path_provider: ^2.1.4<br/>
+  shared_preferences:
+
+  uuid: ^4.4.2<br/>
+  intl: ^0.19.0<br/>
+  collection: ^1.18.0
+  
+  permission_handler: ^11.3.1
+
+  google_maps_flutter: ^2.9.0
 
 ## How to use
 
